@@ -61,9 +61,9 @@
     margin-left: 13px;
 }
 
-.card-columns{
-      column-count: 2;
-    }
+.card-deck{
+    margin-right: 20px;
+}
 .col-xs-14 [for=jawaban]{
     margin-left: 13px;
  }
