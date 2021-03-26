@@ -1,0 +1,76 @@
+
+.navbar-brand{
+    color: rgb(255, 255, 255);
+    
+}
+
+.nav-link{
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.navbar{
+    background-color: #5C2438;
+}
+#kontak{
+    position: absolute;
+    margin-left: 250px;
+}
+
+.col-xs-14{
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 250px;
+    width: 20%;
+}
+.col-md-2 [type=nama]{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 250px;
+    width: 140%;
+    border-style:dashed;
+    border-width: 3px;
+}
+.col-md-2 [for=nama]{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 250px;
+}
+.col-md-2 [type=email]{
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 250px;
+    width: 140%;
+    border-style:dashed;
+    border-width: 3px;
+
+}
+.col-md-2 [for=email]{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 250px;
+}
+.col-xs-14 [type=pertanyaan]{
+    margin-top: 0px;
+    margin-left: 13px;
+    width: 80%;
+    border-style:dashed;
+    border-width: 3px;
+}
+.col-xs-14 [for=pertanyaan]{
+    margin-left: 13px;
+}
+
+.card-columns{
+      column-count: 2;
+    }
+.col-xs-14 [for=jawaban]{
+    margin-left: 13px;
+ }
+ .col-xs-14 [type=jawaban]{
+    margin-top: 0px;
+    margin-left: 13px;
+    width: 80%;
+    border-style:dashed;
+    border-width: 3px;
+}
