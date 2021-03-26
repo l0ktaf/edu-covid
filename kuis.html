@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="quiz.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -20,123 +21,54 @@
                 <a class="nav-link" href="kontak.html" style="text-decoration: none;">Kontak</a>
             </div>
         </nav>
-        <div id="accordion">
+        <div id="according">
             <div class="card">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Apakah sudah ada vaksin untuk COVID-19?
-                  </button>
-                </h5>
-              </div>
+                <div class="card-header" id="headingOne">
+                    <form name="quiz" id="quiz">
+                        <h5 class="mb-0"></h5>
+                            <div class="card-body">
+                                <p>Apakah sudah ada vaksin untuk COVID-19?</p>
+                                <p><input class="form-check-input" type="radio" name="q1" value="benar">A. Sudah</p>
+                                <p><input class="form-check-input" type="radio" name="q1" value="salah">B. Belum</p>
+                            </div>
+                        </h5>
+                        <h5 class="mb-0"></h5>
+                            <div class="card-body">
+                                <p>Apakah vaksin COVID-19 adalah obat?</p>
+                                <p><input class="form-check-input" type="radio" name="q2" value="benar">A. Salah</p>
+                                <p><input class="form-check-input" type="radio" name="q2" value="salah">B. Benar</p>
+                            </div>
+                        </h5>
+                        <h5 class="mb-0"></h5>
+                            <div class="card-body">
+                                <p>Apakah vaksin COVID-19 melindungi secara jangka panjang?</p>
+                                <p><input class="form-check-input" type="radio" name="q3" value="benar">A. Salah</p>
+                                <p><input class="form-check-input" type="radio" name="q3" value="salah">B. Benar</p>
+                            </div>
+                        </h5>
+                        <h5 class="mb-0"></h5>
+                            <div class="card-body">
+                                <p>Apa saja gejala COVID-19?</p>
+                                <p><input class="form-check-input" type="radio" name="q4" value="benar">A. Demam</p>
+                                <p><input class="form-check-input" type="radio" name="q4" value="benar">B. Batuk Kering</p>
+                                <p><input class="form-check-input" type="radio" name="q4" value="benar">C. Semua Benar</p>
+                            </div>
+                        </h5>
+                        <h5 class="mb-0"></h5>
+                            <div class="card-body">
+                                <p>Apakah anak-anak atau remaja dapat terinfeksi COVID-19?</p>
+                                <p><input class="form-check-input" type="radio" name="q5" value="salah">A. Tidak dapat Terinfeksi</p>
+                                <p><input class="form-check-input" type="radio" name="q5" value="benar">B. Dapat Terinfeksi</p>
+                            </div>
+                        </h5>
+
+                        <input type="button" class="btn btn-secondary" name="" value="Lihat Skor!" onclick="check()">
+                        <p id="result">/5</p>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
           
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="jawaban1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio1" value="benar">A. Sudah</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio2">B. Belum</label>
-                    </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Apakah vaksin COVID-19 adalah obat?
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio3" name="jawaban2" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio3" value="benar">A. Salah</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio4">B. Benar</label>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Apakah vaksin COVID-19 melindungi secara jangka panjang?
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio5" name="jawaban3" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio5" value="benar">A. Salah</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio6">B. Benar</label>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingfour">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                        Apa saja gejala COVID-19?
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
-                  <div class="card-body">
-                      <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio7" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio7">A. Demam</label>
-                      </div>
-                      <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio8" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio8">B. Batuk Kering</label>
-                      </div>
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio9" name="jawaban4" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio9" value="benar">C. Benar Semua</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingfive">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                        Apakah anak-anak atau remaja dapat terinfeksi COVID-19?
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion">
-                  <div class="card-body">
-                      <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio10" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio10" value="salah">A. Tidak dapat terinfeksi</label>
-                      </div>
-                      <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio11" name="jawaban5" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio11" value="benar">B. Dapat terinfeksi</label>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <input class="btn-primary col-md-2" type="button" name="" value="Lihat Skor" onclick="check()">
-              <script>
-                  function check() {
-                      var q5=customRadio11;
-                      if(q5=="benar"){2};
-                  }
-              </script>
-          </div>
     </body>
 </html>
